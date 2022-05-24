@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="msg-wrapper">
+      <div class="msg">
+        <p class="close">X</p>
+        <img src="" alt="" class="msgImg" />
+        <p class="msgText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          ipsa sapiente fuga odit iure libero maiores, nisi expedita aspernatur.
+          Maiores soluta illum quis natus voluptates molestiae necessitatibus
+          dolores, blanditiis et.
+        </p>
+      </div>
+    </div>
+    <div class="expense-box">
+      <h1 class="headText">Expense Tracker</h1>
+      <div class="top-box">
+        <div class="account-balance">
+          <p>ACCOUNT BALANCE</p>
+          <p>$<span class="amountVal">0.00</span></p>
+        </div>
+        <div class="buttons">
+          <button class="addMoney">Add Funds</button>
+          <button class="spendFund">Spend</button>
+        </div>
+        <div class="spendForm">
+          <form>
+            <input type="number" class="price" placeholder="amount" />
+            <input type="text" class="details" placeholder="details" />
+            <input type="submit" class="submit" />
+          </form>
+        </div>
+        <div class="spendForm2">
+          <form>
+            <input type="number" class="price2" placeholder="amount" />
+            <input type="text" class="details2" placeholder="details" />
+            <input type="submit" class="submit2" />
+          </form>
+        </div>
+      </div>
+      <div class="transac-box">
+        <h3>Recent transaction</h3>
+        <p class="noRec">No recent transaction yet</p>
+        <div class="recTrans"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
