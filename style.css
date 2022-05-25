@@ -111,3 +111,8 @@ input:focus {
   color: red;
   font-weight: 600;
 }
+@media (max-width: 600px) {
+  .expense-box {
+    width: 50%;
+  }
+}
