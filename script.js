@@ -58,10 +58,11 @@ function addFunds() {
       formAmount.value = "";
       formDetails.value = "";
     } else if (formAmount.value == "" || formDetails.value == "") {
-      msgWrapper.style.display = "flex";
-      msgText.textContent = "Ensure you input all field";
+      msgWrapper.style.display = "block";
+      msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
-      formDet.style.display = "none";
+      formAmount2.value = "";
+      formDetails2.value = "";
     }
   });
 }
@@ -97,7 +98,7 @@ function withdrawFunds() {
       }
     } else if (formAmount2.value == "" || formDetails2.value == "") {
       msgWrapper.style.display = "block";
-      msgText.textContent = "Ensure you fill all input";
+      msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
       formAmount2.value = "";
       formDetails2.value = "";
