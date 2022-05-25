@@ -58,8 +58,6 @@ function addFunds() {
       formAmount.value = "";
       formDetails.value = "";
     } else if (formAmount.value == "" || formDetails.value == "") {
-      msgWrapper.classList.remove("noShow");
-      msgWrapper.classList.add("msg-wrapper");
       msgWrapper.style.display = "flex";
       msgText.textContent = "Ensure you input all field";
       msgImg.src = "./imgs/grade (3).png";
