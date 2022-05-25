@@ -37,6 +37,7 @@
 .msg {
   width: 80%;
   max-width: 300px;
+  height: 300px;
   position: relative;
   margin: 10% auto;
   background: #fff;
@@ -113,6 +114,6 @@ input:focus {
 }
 @media (max-width: 600px) {
   .expense-box {
-    width: 80%;
+    width: 100%;
   }
 }
