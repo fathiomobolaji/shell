@@ -113,6 +113,6 @@ input:focus {
 }
 @media (max-width: 600px) {
   .expense-box {
-    width: 50%;
+    width: 80%;
   }
 }
