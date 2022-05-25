@@ -12,13 +12,16 @@ const formDetails = document.querySelector(".details");
 const formDetails2 = document.querySelector(".details2");
 const recentTrans = document.querySelector(".recTrans");
 var para = document.querySelector(".noRec");
-// var amountVal = Number(document.querySelector(".amountVal").textContent);
+const msgImg = document.querySelector(".msgImg");
+const msgText = document.querySelector(".msgText");
+const closePop = document.querySelector(".close");
+const msgWrapper = document.querySelector(".msg-wrapper");
+
 var total;
-// var amountVal;
 var totalAmountVal;
 addfund.addEventListener("click", addMoney);
 spend.addEventListener("click", spendMoney);
-
+closePop.addEventListener("click", closePopUP);
 function addMoney(e) {
   formDet2.style.display = "none";
   formDet.style.display = "flex";
@@ -28,7 +31,6 @@ function spendMoney(e) {
   formDet.style.display = "none";
   formDet2.style.display = "flex";
   withdrawFunds();
-  console.log("money added");
 }
 
 function addFunds() {
@@ -45,14 +47,23 @@ function addFunds() {
       <p>${formDetails.value}</p>
       <p class="addAmount">+$ ${Number(formAmount.value).toLocaleString()}</p>
         `;
+
+      // msgWrapper.classList.add("noShow");
+      // msgWrapper.classList.remove("msg-wrapper");
+      // msgText.textContent = "saved";
+      // console.log(msgWrapper.classList);
       recentTrans.prepend(list);
       para.style.display = "none";
-      console.log(formAmount.value, "fromhere");
       formDet.style.display = "none";
       formAmount.value = "";
       formDetails.value = "";
-    } else {
-      console.log("onr is empty");
+    } else if (formAmount.value == "" || formDetails.value == "") {
+      msgWrapper.classList.remove("noShow");
+      msgWrapper.classList.add("msg-wrapper");
+      msgWrapper.style.display = "flex";
+      msgText.textContent = "Ensure you input all field";
+      msgImg.src = "./imgs/grade (3).png";
+      formDet.style.display = "none";
     }
   });
 }
@@ -78,10 +89,26 @@ function withdrawFunds() {
         console.log(amount, "from spend");
         console.log("congrats", formAmount2.value);
       } else {
-        console.log("don't congrat");
+        msgWrapper.style.display = "block";
+        msgText.textContent =
+          "Insufficient Balance:You no fit spend pass your income";
+        msgImg.src = "./imgs/grade (1).png";
+        formAmount2.value = "";
+        formDetails2.value = "";
+        formDet2.style.display = "none";
       }
-    } else {
-      console.log("no input");
+    } else if (formAmount2.value == "" || formDetails2.value == "") {
+      msgWrapper.style.display = "block";
+      msgText.textContent = "Ensure you fill all input";
+      msgImg.src = "./imgs/grade (3).png";
+      formAmount2.value = "";
+      formDetails2.value = "";
     }
   });
 }
+function closePopUP() {
+  msgWrapper.style.display = "none";
+}
+msgWrapper.addEventListener("click", () => {
+  msgWrapper.style.display = "none";
+});
