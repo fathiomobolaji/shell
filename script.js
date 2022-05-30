@@ -34,7 +34,7 @@ function spendMoney(e) {
 }
 
 function addFunds() {
-  subButton.addEventListener("click", (e) => {
+  formDet.addEventListener("submit", (e) => {
     e.preventDefault();
     if (formAmount.value != "" && formDetails.value != "") {
       total = Number(formAmount.value);
@@ -55,8 +55,8 @@ function addFunds() {
       recentTrans.prepend(list);
       para.style.display = "none";
       formDet.style.display = "none";
-      formAmount.value = "";
-      formDetails.value = "";
+      // formAmount.value = "";
+      // formDetails.value = "";
     } else if (formAmount.value == "" || formDetails.value == "") {
       msgWrapper.style.display = "block";
       msgText.textContent = "Ensure you input all fields";
@@ -96,12 +96,12 @@ function withdrawFunds() {
         formDetails2.value = "";
         formDet2.style.display = "none";
       }
-    } else if (formAmount2.value == "" || formDetails2.value == "") {
-      msgWrapper.style.display = "block";
-      msgText.textContent = "Ensure you input all fields";
-      msgImg.src = "./imgs/grade (3).png";
-      formAmount2.value = "";
-      formDetails2.value = "";
+    } else {
+      // msgWrapper.style.display = "block";
+      // msgText.textContent = "Ensure you input all fields";
+      // msgImg.src = "./imgs/grade (3).png";
+      // formAmount2.value = "";
+      // formDetails2.value = "";
     }
   });
 }
