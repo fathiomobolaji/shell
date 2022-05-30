@@ -47,16 +47,9 @@ function addFunds() {
       <p>${formDetails.value}</p>
       <p class="addAmount">+$ ${Number(formAmount.value).toLocaleString()}</p>
         `;
-
-      // msgWrapper.classList.add("noShow");
-      // msgWrapper.classList.remove("msg-wrapper");
-      // msgText.textContent = "saved";
-      // console.log(msgWrapper.classList);
       recentTrans.prepend(list);
       para.style.display = "none";
       formDet.style.display = "none";
-      // formAmount.value = "";
-      // formDetails.value = "";
     } else if (formAmount.value == "" || formDetails.value == "") {
       msgWrapper.style.display = "block";
       msgText.textContent = "Ensure you input all fields";
@@ -83,8 +76,6 @@ function withdrawFunds() {
        ).toLocaleString()}</p>
         `;
         recentTrans.prepend(list);
-        // formAmount2.value = "";
-        // formDetails2.value = "";
         console.log(amount, "from spend");
         console.log("congrats", formAmount2.value);
       } else {
@@ -92,8 +83,6 @@ function withdrawFunds() {
         msgText.textContent =
           "Insufficient Balance:You no fit spend pass your income";
         msgImg.src = "./imgs/grade (1).png";
-        // formAmount2.value = "";
-        // formDetails2.value = "";
         formDet2.style.display = "none";
       }
     } else if (formAmount2.value == "" || formDetails2.value == "") {
