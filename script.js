@@ -61,8 +61,8 @@ function addFunds() {
       msgWrapper.style.display = "block";
       msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
-      formAmount2.value = "";
-      formDetails2.value = "";
+      // formAmount2.value = "";
+      // formDetails2.value = "";
     }
   });
 }
@@ -100,8 +100,8 @@ function withdrawFunds() {
       msgWrapper.style.display = "block";
       msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
-      formAmount2.value = "";
-      formDetails2.value = "";
+      // formAmount2.value = "";
+      // formDetails2.value = "";
     }
   });
 }
