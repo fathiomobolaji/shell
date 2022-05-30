@@ -78,7 +78,7 @@ function withdrawFunds() {
         recentTrans.prepend(list);
         console.log(amount, "from spend");
         console.log("congrats", formAmount2.value);
-      } else {
+      } else if (Number(formAmount2.value) > amount) {
         msgWrapper.style.display = "block";
         msgText.textContent =
           "Insufficient Balance:You no fit spend pass your income";
