@@ -83,8 +83,8 @@ function withdrawFunds() {
        ).toLocaleString()}</p>
         `;
         recentTrans.prepend(list);
-        formAmount2.value = "";
-        formDetails2.value = "";
+        // formAmount2.value = "";
+        // formDetails2.value = "";
         console.log(amount, "from spend");
         console.log("congrats", formAmount2.value);
       } else {
@@ -96,12 +96,12 @@ function withdrawFunds() {
         formDetails2.value = "";
         formDet2.style.display = "none";
       }
-    } else {
-      // msgWrapper.style.display = "block";
-      // msgText.textContent = "Ensure you input all fields";
-      // msgImg.src = "./imgs/grade (3).png";
-      // formAmount2.value = "";
-      // formDetails2.value = "";
+    } else if (formAmount2.value == "" || formDetails2.value == "") {
+      msgWrapper.style.display = "block";
+      msgText.textContent = "Ensure you input all fields";
+      msgImg.src = "./imgs/grade (3).png";
+      formAmount2.value = "";
+      formDetails2.value = "";
     }
   });
 }
