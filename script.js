@@ -64,6 +64,7 @@ function addFunds() {
       // formAmount2.value = "";
       // formDetails2.value = "";
     }
+    formDet.reset();
   });
 }
 function withdrawFunds() {
@@ -103,6 +104,7 @@ function withdrawFunds() {
       // formAmount2.value = "";
       // formDetails2.value = "";
     }
+    formDet2.reset();
   });
 }
 function closePopUP() {
