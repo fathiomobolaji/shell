@@ -92,8 +92,8 @@ function withdrawFunds() {
         msgText.textContent =
           "Insufficient Balance:You no fit spend pass your income";
         msgImg.src = "./imgs/grade (1).png";
-        formAmount2.value = "";
-        formDetails2.value = "";
+        // formAmount2.value = "";
+        // formDetails2.value = "";
         formDet2.style.display = "none";
       }
     } else if (formAmount2.value == "" || formDetails2.value == "") {
