@@ -48,15 +48,15 @@ function addFunds() {
       <p class="addAmount">+$ ${Number(formAmount.value).toLocaleString()}</p>
         `;
       recentTrans.prepend(list);
+      localStorage.setItem("transactions", recentTrans.innerHTML);
       para.style.display = "none";
       formDet.style.display = "none";
+      localStorage.setItem("Balance", amount);
     } else if (formAmount.value == "" || formDetails.value == "") {
       msgWrapper.style.display = "block";
       msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
     }
-    formAmount.value = "";
-    formDetails.value = "";
   });
 }
 function withdrawFunds() {
@@ -76,8 +76,9 @@ function withdrawFunds() {
        ).toLocaleString()}</p>
         `;
         recentTrans.prepend(list);
-        console.log(amount, "from spend");
-        console.log("congrats", formAmount2.value);
+        localStorage.setItem("transactions", recentTrans.innerHTML);
+        console.log(recentTrans);
+        localStorage.setItem("Balance", amount);
       } else if (Number(formAmount2.value) > amount) {
         msgWrapper.style.display = "block";
         msgText.textContent =
@@ -90,8 +91,6 @@ function withdrawFunds() {
       msgText.textContent = "Ensure you input all fields";
       msgImg.src = "./imgs/grade (3).png";
     }
-    formAmount2.value = "";
-    formDetails2.value = "";
   });
 }
 function closePopUP() {
@@ -100,3 +99,16 @@ function closePopUP() {
 msgWrapper.addEventListener("click", () => {
   msgWrapper.style.display = "none";
 });
+
+if (localStorage.getItem("Balance")) {
+  var newAmount = Number(localStorage.getItem("Balance"));
+  amount = newAmount;
+  amountVal.textContent = amount.toLocaleString();
+  console.log(amount);
+}
+if (localStorage.getItem("transactions")) {
+  var newTrans = localStorage.getItem("transactions");
+  para.style.display = "none";
+  recentTrans.innerHTML = newTrans;
+  console.log(newTrans);
+}

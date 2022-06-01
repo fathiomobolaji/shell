@@ -69,6 +69,8 @@ input:focus {
   background-color: #fd8b12;
   padding: 20px;
   border-radius: 15px;
+  max-width: 300px;
+  margin: auto;
 }
 .noShow {
   display: none !important;
@@ -111,6 +113,10 @@ input:focus {
 .spendAmount {
   color: red;
   font-weight: 600;
+}
+.transac-box {
+  max-height: 50px !important;
+  padding: 50px;
 }
 @media (max-width: 600px) {
   .expense-box {
