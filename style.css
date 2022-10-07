@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial ,Helvetica,sans-serif;
+     
+}
+/* HEADER */
+.topheader{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem ;
+    padding-bottom: 0.5rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+header nav ul a{
+    text-decoration: none;
+    color: #404040;
+}
+header nav ul a:hover{
+    border-bottom: 0.3rem solid #DCDCDC;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0;
+}
+header nav ul li{
+    padding-right: 2rem;
+}
+header img{
+    width: 5rem;
+}
+header{
+    border-bottom: 0.3rem solid #404040;
+    font-weight:bolder;
+}
+ 
+.navigations ul{
+    padding: 1rem;
+}
+/* background image 1 */
+ 
+.bgimage1{
+    background: url(./osagie-okunbor.webp) ;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.caption{
+    width: 30rem;
+    padding: 5rem;
+    color: white;
+    font-family:  Arial ,Helvetica,sans-serif;
+    line-height: 2rem;
+}
+.bgimage1 .caption a{
+    margin: 2rem 0;
+    padding: 1.7rem 5.3rem;
+    color: white;
+    background-color: rgb(221,29,33);
+    width: 20rem;
+    text-decoration: none;
+}
+.bgimage1 .caption p{
+    margin-bottom: 3rem;
+
+}
+/* business section */
+h1 {
+    text-align: center;
+    color:#404040;
+}
+.sections{
+    padding: 2.5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+    background-color:#F7F7F7;
+}
+section{
+    background-color: #fff;
+    padding: 2rem;
+    border-bottom:0.2rem solid rgb(221,29,33) ;
+}
+h3{
+    font-size: 1.5rem;
+}
+section:hover h3{
+    color: rgb(221,29,33);
+    text-decoration-color: rgb(221,29,33);
+}
+a{
+    color:#404040; 
+}
+/* background-image2 */
+.bgimage2{
+    background: url(./adobestock.webp) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30rem;
+    margin-top: 0;
+    padding: 3rem 10rem 8rem 7rem;
+    display: flex;
+    justify-content: right;
+}
+.bgimage2 p{
+    margin-bottom: 2rem;
+}
+.bgimage2 h2{
+    font-size: 2.3rem;
+}
+.bgimage2 a {
+    color: blue;
+}
+.caption2{
+    text-align: left;
+    width: 30rem;
+    min-height: 15rem;
+    padding: 3rem;
+    background-color: #fff;
+    color: rgb(0,60,136);
+     
+}
+/* INVESTMENTS */
+.latestnews{
+    background-color: #fff;
+}
+.investments{
+    background-color:#F7F7F7;
+    display: flex;
+    /* justify-content: space-between; */
+     
+    /* padding: 1rem; */
+}
+.investments section{
+   width: 30%;
+   margin: 1rem;
+
+}
+.investments img{
+    width: 23rem;
+ 
+}
+.investments img:hover{
+    width: 23.5rem;
+    transition-duration: 0.5s;
+}
+
+/* FOOTER */
+footer{
+    font-size: 0.7rem;
+}
+.empty {
+    padding: 3rem;
+    height: 5rem;
+  
+}
+.empty a {
+    padding: 2rem;
+ 
+}
+
+.more a {
+    text-decoration: none;
+}
+.more a:hover{
+    text-decoration:underline;
+}
+.footer{
+    line-height: 3rem;
+    
+ }
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+}
+.more ul {
+    display: block;
+}
